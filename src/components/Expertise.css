@@ -1,0 +1,112 @@
+.expertise-section {
+  padding: 6rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.expertise-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+  gap: 4rem;
+}
+
+/* --- Left Column --- */
+.expertise-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.phone-mockup {
+  width: 250px;
+  height: 500px;
+  background-color: #161B22;
+  border: 8px solid #0D1117;
+  border-radius: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.floating-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #161B22;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon-1 { top: 10%; left: 0; animation-duration: 7s; }
+.icon-2 { top: 40%; left: -20px; animation-duration: 8s; animation-direction: alternate; }
+.icon-3 { top: 30%; right: -10px; animation-duration: 5s; }
+.icon-4 { bottom: 15%; right: 10px; animation-duration: 9s; animation-direction: alternate; }
+
+/* --- Right Column --- */
+.expertise-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expertise-card {
+  background-color: #161B22;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  border-color: var(--primary-blue);
+  transform: scale(1.03);
+}
+
+.card-text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-text p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.card-bg-icon {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-size: 8rem;
+  color: var(--text-primary);
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none; 
+  transform: rotate(-15deg);
+}
