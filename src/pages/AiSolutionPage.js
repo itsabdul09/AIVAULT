@@ -1,7 +1,6 @@
 import React from 'react';
 import './AiSolutionPage.css';
 
-// You should replace these placeholder image URLs with your actual images.
 import img1 from './data/AI1.png';
 import img2 from './data/AI2.png';
 import img3 from './data/AI3.png';
@@ -10,7 +9,6 @@ const AiSolutionPage = () => {
   return (
     <div className="ai-solution-page container">
       
-      {/* Page Header */}
       <header className="page-header">
         <h1>Our AI Solutions</h1>
         <p className="subtitle">
@@ -18,10 +16,8 @@ const AiSolutionPage = () => {
         </p>
       </header>
 
-      {/* Solutions Section */}
       <main className="solutions-container">
 
-        {/* --- Card 1: Enterprise GenAI Platform --- */}
         <section className="solution-card">
           <div className="solution-text">
             <h2>Enterprise GenAI Platform</h2>
@@ -38,7 +34,6 @@ const AiSolutionPage = () => {
           </div>
         </section>
 
-        {/* --- Card 2: AI Life-cycle Management Platform --- */}
         <section className="solution-card reverse">
           <div className="solution-text">
             <h2>AI Life-cycle Management Platform</h2>
@@ -55,7 +50,6 @@ const AiSolutionPage = () => {
           </div>
         </section>
 
-        {/* --- Card 3: Predictive & Generative AI Platform --- */}
         <section className="solution-card">
           <div className="solution-text">
             <h2>Predictive & Generative AI Platform</h2>

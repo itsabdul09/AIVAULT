@@ -17,7 +17,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-visual">
-        {/*illustration lgani h */}
         <div className="floating-card card1"></div>
         <div className="floating-card card2"></div>
         <div className="floating-card card3"></div>

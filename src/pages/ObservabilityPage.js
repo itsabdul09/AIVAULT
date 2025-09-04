@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './ObservabilityPage.css';
 
-// Placeholder images - replace these with your actual images
-const appObservabilityImg = 'https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4-0-3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200';
-const infraMonitoringImg = 'https://images.unsplash.com/photo-1591453082234-5852338c2b18?ixlib=rb-4-0-3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200';
+import ITimg1 from './data/IT1.png';
+import ITimg2 from './data/IT2.png';
 
 const ObservabilityPage = () => {
-    // State to manage which tab is currently active
     const [activeTab, setActiveTab] = useState('application');
 
     return (
@@ -50,7 +48,7 @@ const ObservabilityPage = () => {
                                 </ul>
                             </div>
                             <div className="panel-visual">
-                                <img src={appObservabilityImg} alt="Application Observability" />
+                                <img src={ITimg1} alt="Application Observability" />
                             </div>
                         </div>
                     )}
@@ -67,7 +65,7 @@ const ObservabilityPage = () => {
                                 </ul>
                             </div>
                             <div className="panel-visual">
-                                <img src={infraMonitoringImg} alt="Infrastructure Monitoring" />
+                                <img src={ITimg2} alt="Infrastructure Monitoring" />
                             </div>
                         </div>
                     )}

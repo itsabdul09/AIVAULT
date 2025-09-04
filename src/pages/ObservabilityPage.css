@@ -3,7 +3,6 @@
     padding-bottom: 6rem;
 }
 
-/* Header styles remain consistent */
 .observability-page .page-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -24,7 +23,6 @@
     line-height: 1.7;
 }
 
-/* --- Tab Container --- */
 .tab-container {
     width: 100%;
 }
@@ -44,7 +42,7 @@
     border: none;
     cursor: pointer;
     position: relative;
-    top: 2px; /* Aligns the bottom border with the container's border */
+    top: 2px; 
     border-bottom: 3px solid transparent;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
@@ -58,7 +56,6 @@
     border-bottom-color: var(--primary-blue);
 }
 
-/* --- Tab Content Styling --- */
 @keyframes fadeInContent {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -66,13 +63,13 @@
 
 .tab-panel {
     display: flex;
-    flex-direction: column; /* Mobile first: stack text and image */
+    flex-direction: column; 
     gap: 2rem;
     animation: fadeInContent 0.5s ease-out;
 }
 
 .panel-text {
-    flex: 3; /* Takes more space */
+    flex: 3; 
 }
 
 .panel-text h3 {
@@ -115,7 +112,7 @@
 }
 
 .panel-visual {
-    flex: 2; /* Takes less space */
+    flex: 2; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,11 +127,9 @@
     border: 1px solid var(--border-color);
 }
 
-
-/* --- Desktop Layout --- */
 @media (min-width: 992px) {
     .tab-panel {
-        flex-direction: row; /* Side-by-side on desktop */
+        flex-direction: row; 
         gap: 4rem;
     }
 }

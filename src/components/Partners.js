@@ -2,13 +2,13 @@ import React from 'react';
 import './Partners.css';
 
 const partnerLogos = [
-  'IBM',
-  'ZOHO',
-  'solarwinds',
-  'ManageEngine',
-  'FORTRA',
-  'CATO',
-  'accopus',
+'IBM',
+'ZOHO',
+'solarwinds',
+'ManageEngine',
+'FORTRA',
+'CATO',
+'accopus',
 ];
 
 const Partners = () => {

@@ -45,16 +45,15 @@ const CyberSecurityPage = () => {
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState([]);
 
-  // Effect to progressively load/animate images
   useEffect(() => {
     const timers = [];
     features.forEach((_, index) => {
       const timer = setTimeout(() => {
         setLoadedImages(prev => [...prev, index]);
-      }, index * 300); // 300ms delay between each image
+      }, index * 300); 
       timers.push(timer);
     });
-    return () => timers.forEach(timer => clearTimeout(timer)); // Cleanup
+    return () => timers.forEach(timer => clearTimeout(timer)); 
   }, []);
 
   return (
@@ -67,35 +66,33 @@ const CyberSecurityPage = () => {
         </p>
       </header>
 
-      <main className="features-grid"> {/* Changed from interactive-layout */}
-        
+      <main className="features-grid">
         {features.map((feature, index) => (
           <div
             key={index}
             className={`feature-item ${index === activeFeatureIndex ? 'active' : ''}`}
             onClick={() => setActiveFeatureIndex(index)}
           >
-                        <div className="feature-item-image-wrapper">
-                <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className={loadedImages.includes(index) ? 'loaded' : ''}
-                />
+
+          <div className="feature-item-image-wrapper">
+              <img
+                src={feature.image}
+                alt={feature.title}
+                className={loadedImages.includes(index) ? 'loaded' : ''}
+              />
             </div>
-            
             <div className="feature-content">
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-                <ul>
-                    {feature.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                    ))}
-                </ul>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+              <ul>
+                {feature.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
 
           </div>
         ))}
-
       </main>
     </div>
   );

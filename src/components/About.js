@@ -1,7 +1,6 @@
 import React from 'react';
 import './About.css';
 
-// 1. Import your icons from the assets folder
 import aiIcon from './assets/AI.png';
 import securityIcon from './assets/CS.png';
 import observabilityIcon from './assets/AO.png';
@@ -20,7 +19,6 @@ const About = () => {
       <div className="features-grid">
         <div className="feature-card">
           <div className="card-icon">
-            {/* 2. Replace emoji with an img tag */}
             <img src={aiIcon} alt="AI and Machine Learning icon" />
           </div>
           <h3 className="card-title">AI & ML</h3>
