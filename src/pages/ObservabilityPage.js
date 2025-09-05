@@ -18,7 +18,6 @@ const ObservabilityPage = () => {
             </header>
 
             <main className="tab-container">
-                {/* --- Tab Buttons --- */}
                 <div className="tab-buttons">
                     <button
                         className={`tab-btn ${activeTab === 'application' ? 'active' : ''}`}
@@ -34,7 +33,6 @@ const ObservabilityPage = () => {
                     </button>
                 </div>
 
-                {/* --- Tab Content --- */}
                 <div className="tab-content">
                     {activeTab === 'application' && (
                         <div className="tab-panel">
