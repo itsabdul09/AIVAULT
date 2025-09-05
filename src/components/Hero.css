@@ -80,31 +80,30 @@
 .floating-img {
   position: absolute;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   animation: float infinite ease-in-out;
 }
 
 .img1 {
-  width: 220px;
-  top: 15%;
-  left: 5%;
-  z-index: 4; /* Behind text */
+  width: 400px;
+  top: 25%;
+  left: -30px;
+  z-index: 6; /* Behind text */
   animation-duration: 6s;
 }
 
 .img2 {
-  width: 180px;
-  bottom: 10%;
+  width: 280px;
+  bottom: 5%;
   right: 8%;
-  z-index: 4; /* Behind text */
+  z-index: 6; /* Change this from 4 to 6 */
   animation-duration: 8s;
   animation-delay: 0.5s;
 }
 
 .img3 {
   width: 150px;
-  top: 20%;
-  right: 5%;
+  top: 15%;
+  right: 8%;
   z-index: 6; /* In front of text */
   animation-duration: 7s;
 }
@@ -128,5 +127,12 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .floating-img {
+    display: none;
   }
 }

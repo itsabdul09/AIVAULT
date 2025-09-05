@@ -2,10 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 
+// 1. Import the images from your assets folder
+import heroImage1 from './assets/h1.png';
+import heroImage2 from './assets/h2.png';
+import heroImage3 from './assets/h3.png';
+
 const Hero = () => {
   return (
-    // The main container remains the same
-    <section className="hero container">
+    <section className="hero">
+      <div className="container">
       <div className="hero-content">
         <h1 className="hero-title">
           Fortifying digital space with<br />Value, Vision & Vigilance
@@ -17,11 +22,11 @@ const Hero = () => {
           <Link to="/contact" className="btn btn-primary">Get Started →</Link>
         </div>
       </div>
-      
-      {/* Images are now direct children, the .hero-visual div is removed */}
-      <img src="/images/hero-image-1.png" alt="App interface example" className="floating-img img1" />
-      <img src="/images/hero-image-2.png" alt="Cyber security icon" className="floating-img img2" />
-      <img src="/images/hero-image-3.png" alt="Cloud infrastructure diagram" className="floating-img img3" />
+      </div>
+  
+      <img src={heroImage1} alt="App interface example" className="floating-img img1" />
+      <img src={heroImage2} alt="Cyber security icon" className="floating-img img2" />
+      <img src={heroImage3} alt="Cloud infrastructure diagram" className="floating-img img3" />
     </section>
   );
 }
