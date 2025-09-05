@@ -4,17 +4,16 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // New state for mobile menu
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    // Close dropdown if mobile menu is opened/closed
     if (dropdown) setDropdown(false); 
   };
 
   const handleLinkClick = () => {
-    setMobileMenuOpen(false); // Close mobile menu on link click
-    setDropdown(false); // Also close dropdown on link click
+    setMobileMenuOpen(false); 
+    setDropdown(false); 
   };
 
   return (
@@ -24,21 +23,18 @@ const Navbar = () => {
           AI Vault
         </Link>
       </div>
-
-      {/* Hamburger menu icon for mobile */}
       <div className="hamburger-menu" onClick={toggleMobileMenu}>
         <div className={`bar ${mobileMenuOpen ? 'open' : ''}`}></div>
         <div className={`bar ${mobileMenuOpen ? 'open' : ''}`}></div>
         <div className={`bar ${mobileMenuOpen ? 'open' : ''}`}></div>
       </div>
 
-      <ul className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}> {/* Apply 'open' class for mobile */}
+      <ul className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}> 
         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
         <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
         
         <li 
           className="nav-item-dropdown"
-          // Add touch events for better mobile dropdown experience if needed, though click is okay for now
         >
           <a 
             href="#solutions" 
@@ -58,7 +54,7 @@ const Navbar = () => {
           )}
         </li>
 
-        <li><Link to="/contact" className="navbar-button" onClick={handleLinkClick}>Contact</Link></li> {/* Convert contact button to a link for consistency in mobile menu */}
+        <li><Link to="/contact" className="navbar-button" onClick={handleLinkClick}>Contact</Link></li> 
       </ul>
     </nav>
   );

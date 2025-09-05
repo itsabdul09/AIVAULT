@@ -1,0 +1,112 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Base style for both panels */
+.split-panel {
+    position: absolute;
+    top: 0;
+    width: 50%; /* Each panel is half the screen width */
+    height: 100%;
+    overflow: hidden;
+    /* This transition animates the panel moving off-screen */
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.split-panel.left {
+    left: 0;
+}
+
+.split-panel.right {
+    right: 0;
+}
+
+/* This is the key change for a seamless video */
+.loading-video {
+    position: absolute;
+    top: 0;
+    left: 0; /* Base position for the video in the left panel */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Override: Position the video in the RIGHT panel to show its right half */
+.split-panel.right .loading-video {
+    left: -100%; /* Move the video to the left by its full width */
+}
+
+
+/* --- EXIT ANIMATION --- */
+/* When exiting, the panels slide away */
+.loading-screen.exiting .split-panel.left {
+    transform: translateX(-100%);
+}
+
+.loading-screen.exiting .split-panel.right {
+    transform: translateX(100%);
+}
+
+
+/* --- TEXT STYLES (No change here) --- */
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-screen.exiting .loading-text {
+    opacity: 0;
+}
+
+.loading-text span {
+    display: block;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.loading-text span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.loading-text span:nth-child(2) {
+    font-size: 2rem;
+    font-weight: 400;
+    animation-delay: 1.3s;
+}
+.loading-text span:nth-child(3) {
+    animation-delay: 2.1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .loading-text {
+        font-size: 2.5rem;
+    }
+    .loading-text span:nth-child(2) {
+        font-size: 1.5rem;
+    }
+}

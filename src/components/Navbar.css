@@ -41,8 +41,7 @@
 }
 
 .navbar-button {
-    background-color: var(--text-primary);
-    color: var(--background-dark);
+    color: var(--text-secondary);
     border: none;
     border-radius: 9999px;
     padding: 0.75rem 1.5rem;
@@ -52,7 +51,7 @@
 }
 
 .navbar-button:hover {
-    background-color: #d1d5db; 
+    background-color: #6498e6; 
 }
 
 .nav-item-dropdown {

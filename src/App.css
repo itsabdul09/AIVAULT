@@ -64,3 +64,12 @@
     transform: translateY(0);
   }
 }
+
+.main-content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.main-content.visible {
+  opacity: 1;
+}
