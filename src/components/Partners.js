@@ -1,14 +1,22 @@
 import React from 'react';
 import './Partners.css';
 
+import ibmLogo from './assets/ibm.svg';       
+import zohoLogo from './assets/zoho.svg';     
+import solarwindsLogo from './assets/solarwinds.svg'; 
+import manageEngineLogo from './assets/manageengine.svg'; 
+import fortraLogo from './assets/fortra.svg';   
+import catoLogo from './assets/cato-green.svg';         
+import accopusLogo from './assets/Accops.svg';   
+
 const partnerLogos = [
-'IBM',
-'ZOHO',
-'solarwinds',
-'ManageEngine',
-'FORTRA',
-'CATO',
-'accopus',
+  { name: 'IBM', src: ibmLogo },
+  { name: 'ZOHO', src: zohoLogo },
+  { name: 'SolarWinds', src: solarwindsLogo },
+  { name: 'ManageEngine', src: manageEngineLogo },
+  { name: 'FORTRA', src: fortraLogo },
+  { name: 'CATO', src: catoLogo },
+  { name: 'Accopus', src: accopusLogo },
 ];
 
 const Partners = () => {
@@ -23,12 +31,12 @@ const Partners = () => {
         <div className="logos-track">
           {partnerLogos.map((logo, index) => (
             <div className="logo-item" key={`a-${index}`}>
-              <span>{logo}</span>
+              <img src={logo.src} alt={`${logo.name} Logo`} />
             </div>
           ))}
           {partnerLogos.map((logo, index) => (
             <div className="logo-item" key={`b-${index}`}>
-              <span>{logo}</span>
+              <img src={logo.src} alt={`${logo.name} Logo`} />
             </div>
           ))}
         </div>

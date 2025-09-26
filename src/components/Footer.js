@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-column">
-            <h3>Vault AI</h3>
+            <h3>AI Vault</h3>
             <p>The standard for Modular AI building infrastructure with a wide range of RWA applications.</p>
           </div>
           

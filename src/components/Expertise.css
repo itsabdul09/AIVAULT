@@ -110,6 +110,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+      margin-left: 2px;
+    margin-right: 2px;
 }
 
 .expertise-card {
@@ -160,5 +162,21 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .expertise-section {
+    padding: 4rem 1rem; 
+  }
+
+  .section-header h2 {
+    font-size: 2rem; /* Make the main title a bit smaller */
+  }
+
+  .expertise-content {
+    /* Reduce the large gap for a tighter mobile layout */
+    gap: 2rem;
   }
 }

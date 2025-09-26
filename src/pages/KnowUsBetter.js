@@ -1,6 +1,9 @@
 import React from 'react';
 import './KnowUsBetter.css';
 
+// 1. Import your image from the data folder
+import knowImage from './data/know.png';
+
 const KnowUsBetter = () => {
   return (
     <div className="container">
@@ -26,26 +29,15 @@ const KnowUsBetter = () => {
             </p>
           </div>
           <div className="kub-visual-content animated-item" style={{ animationDelay: '0.6s' }}>
+            {/* 2. Add the img tag inside the placeholder */}
             <div className="visual-placeholder">
+              <img src={knowImage} alt="Our team collaborating in a modern office" />
             </div>
           </div>
         </div>
 
         <div className="kub-mission-vision">
-          <div className="kub-card animated-item" style={{ animationDelay: '0.8s' }}>
-            <div className="card-bg-icon">🎯</div> 
-            <h3>Our Mission</h3>
-            <p>
-              To empower organisations with <strong>secure, intelligent, and scalable IT solutions</strong> by combining decades of expertise with next-generation technologies. We strive to be a trusted partner in every client’s <strong>digital and AI-driven transformation journey</strong>, ensuring security, efficiency, and resilience at every step.
-            </p>
-          </div>
-          <div className="kub-card animated-item" style={{ animationDelay: '1.0s' }}>
-            <div className="card-bg-icon">✨</div>
-            <h3>Our Vision</h3>
-            <p>
-              To be recognised as a <strong>global leader in AI, cybersecurity, and IT transformation</strong>, enabling businesses to thrive in the digital era by building <strong>future-ready, secure, and innovative ecosystems</strong>.
-            </p>
-          </div>
+          {/* ... rest of your component */}
         </div>
 
       </section>
