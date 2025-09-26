@@ -5,8 +5,8 @@ import ibmLogo from './assets/ibm.svg';
 import zohoLogo from './assets/zoho.svg';     
 import solarwindsLogo from './assets/solarwinds.svg'; 
 import manageEngineLogo from './assets/manageengine.svg'; 
-import fortraLogo from './assets/fortra.svg';   
-import catoLogo from './assets/cato-green.svg';         
+import fortraLogo from './assets/fortra.svg';  
+import catoLogo from './assets/cato-green.svg';       
 import accopusLogo from './assets/Accops.svg';   
 
 const partnerLogos = [
@@ -20,6 +20,8 @@ const partnerLogos = [
 ];
 
 const Partners = () => {
+  const numLogos = partnerLogos.length;
+
   return (
     <section className="partners-section">
       <div className="section-header">
@@ -28,7 +30,10 @@ const Partners = () => {
       </div>
 
       <div className="logos-container">
-        <div className="logos-track">
+        <div 
+          className="logos-track"
+          style={{ '--num-logos': numLogos }}
+        >
           {partnerLogos.map((logo, index) => (
             <div className="logo-item" key={`a-${index}`}>
               <img src={logo.src} alt={`${logo.name} Logo`} />
